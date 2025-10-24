@@ -332,7 +332,7 @@ const TransactionTable = ({transactions}) => {
                   <TableCell className="capitalize">
                     <span
                       style={{
-                        background: categoryColors[transaction.category],
+                        background: categoryColors[transaction.category] || "#f43f5e",
                       }}
                       className="px-2 py-1 rounded text-white text-sm"
                     >

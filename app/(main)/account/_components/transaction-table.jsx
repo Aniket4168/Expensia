@@ -5,7 +5,7 @@ import {Table, TableBody,  TableCaption,  TableCell,  TableHead,  TableHeader,  
 import { Checkbox } from '@/components/ui/checkbox'
 import { compareAsc, format } from 'date-fns'
 import { categoryColors } from '@/data/categories'
-import {  Tooltip,  TooltipContent,  TooltipTrigger,} from "@/components/ui/tooltip"
+import {  Tooltip,  TooltipContent,  TooltipProvider,  TooltipTrigger,} from "@/components/ui/tooltip"
 import { Badge } from '@/components/ui/badge'
 import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Clock, MoreHorizontal, RefreshCw, Search, Trash, X } from 'lucide-react'
 import { formatInTimeZone } from 'date-fns-tz';
@@ -347,7 +347,7 @@ const TransactionTable = ({transactions}) => {
                         : "text-green-500"
                     )}
                   >
-                    {transaction.type === "EXPENSE" ? "-" : "+"}$
+                    {transaction.type === "EXPENSE" ? "-" : "+"}₹
                     {transaction.amount.toFixed(2)}
                   </TableCell>
                   <TableCell>
